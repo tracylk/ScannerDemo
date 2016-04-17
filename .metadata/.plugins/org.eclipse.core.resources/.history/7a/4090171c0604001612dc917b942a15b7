@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+
+public class InputMenu {
+	
+    public void display_menu() 
+    {
+	    // Printing menu to screen
+	    System.out.println("Menu:");
+	    System.out.println("1. Capitalize a string");
+	    System.out.println("2. Reverse a string");
+	    System.out.println("3. Tell if string and reverse string is true");
+	    System.out.println("4. Quit Program");
+	
+	    // Getting user option from above menu
+		System.out.print("Selection: ");
+    }
+    
+    public InputMenu() 
+    {
+    	boolean bContinue = true;
+    	
+    	while (bContinue == true) {
+			Scanner in = new Scanner(System.in);
+		        display_menu();
+		  
+			switch (in.nextInt()) 
+			{
+			    case 1:
+			    System.out.println ( "You picked option 1" );
+			    
+			    break;
+		  
+			    case 2:
+			    System.out.println ( "You picked option 2" );
+			    
+			    break;
+		  
+			    case 3:
+			    System.out.println ( "You picked option 3" );
+			    
+			    break;
+			    
+			    case 4:
+			    System.out.println ( "Goodbye!" );
+			    bContinue = false;
+			    break;
+			    
+			    default:
+			    System.err.println ( "Unrecognized option, try again" );
+			    break;		    
+			}
+    	}
+    }
+ 
+}

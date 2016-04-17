@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+
+public class StringDemo {
+
+	public static void main(String[] args) {
+	    //Data data = new Data();
+	    //data.menu();
+        // Declaring var for user option and defaulting to 0
+        int option = 0;
+
+        // Printing menu to screen
+        System.out.println("Menu:");
+        System.out.println("1.Add");
+        System.out.println("2.Subtract");
+        System.out.println("3.Guess a Random Number");
+        System.out.println("4. Print many times");
+        System.out.println("5. Quit Program");
+
+        // Getting user option from above menu
+        System.out.println("Enter Option from above...");
+	    Scanner scanner = new Scanner(System.in);
+	    int choice = scanner.nextInt();
+
+	    switch (choice) {
+	        case 1:
+	            // Perform "original number" case.
+	            break;
+	        case 2:
+	            // Perform "encrypt number" case.
+	            break;
+	        case 3:
+	            // Perform "decrypt number" case.
+	            break;
+	        case 4:
+	            // Perform "quit" case.
+	            break;
+	        default:
+	            // The user input an unexpected choice.
+	    }
+
+	}
+
+}
