@@ -21,13 +21,31 @@ public class InputMenu {
     	boolean bContinue = true;
     	String sTestString = "this is my string";
 	    StringBuilder sDisplayString = new StringBuilder(sTestString);
-	    
+	    Integer iInput = 0;
+	    Scanner in = new Scanner(System.in);
     	while (bContinue == true) {
-			Scanner in = new Scanner(System.in);
+			//in = new Scanner(System.in);
 		        display_menu();
-		  
-			switch (in.nextInt()) 
+		    
+		    
+		    try {    
+		    	if (!in.hasNextInt()) {
+		    		System.out.print("Not an integer, try again: ");
+		    	} else {
+		    	iInput = in.nextInt();
+		    	in.nextLine();
+		    	}
+		    } catch (Exception e) {
+		    	System.out.println("Exception occurred: " + e.getMessage());
+		    	iInput = 0;
+		    }
+			switch (iInput) 
 			{
+				case 0:
+				System.out.println("An exception occurred, try again");
+				
+				break;
+				
 			    case 1:
 			    System.out.println ( "You picked option 1, capitalize a string. Capitalizing: " + sTestString );
 			    System.out.println(sTestString.toUpperCase());
@@ -56,8 +74,9 @@ public class InputMenu {
 			    System.err.println ( "Unrecognized option, try again" );
 			    break;		    
 			}
-			in.close();
+			//in.close();
     	}
+    	in.close();
     }
  
 }
